@@ -8,7 +8,7 @@ function MainLayout({ children }: any) {
         <TopBar />
       </div>
 
-      <main className="pt-28">{children}</main>
+      <main>{children}</main>
 
       <div>
         <Footer />
