@@ -61,7 +61,7 @@ const Landing = () => {
       <div>
         <h1>LATEST PROPERTY LISTINGS</h1>
 
-        <div className="max-w-sm rounded overflow-hidden shadow-lg pb-6">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg pb-6 ">
           <img
             className="w-full"
             src="/assets/list1.png"
@@ -99,9 +99,20 @@ const Landing = () => {
           <div className="flex ml-5 gap-5 pt-2 text-indigo-300">
             <p>Lisa Jhonson</p>
             <SlCalender className="mt-1.5 ml-4" />
-            <p >1 months ago</p>
+            <p>1 months ago</p>
           </div>
         </div>
+      </div>
+
+      {/* button */}
+      <div className="flex justify-center mb-8">
+        <Button
+          className="mt-10 rounded-full w-[218px] h-[60px] border-[2px]"
+          variant={"default"}
+          size={"lg"}
+        >
+          Read More
+        </Button>
       </div>
     </div>
   );
