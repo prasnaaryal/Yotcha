@@ -5,6 +5,8 @@ import { FaArrowsAlt } from "react-icons/fa";
 import { FaBath, FaLocationDot } from "react-icons/fa6";
 import { IoBed } from "react-icons/io5";
 import { SlCalender } from "react-icons/sl";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
 
 const Landing = () => {
   return (
@@ -59,9 +61,9 @@ const Landing = () => {
 
       {/* property listing */}
       <div>
-        <h1>LATEST PROPERTY LISTINGS</h1>
+        <h1 className="">LATEST PROPERTY LISTINGS</h1>
 
-        <div className="max-w-sm rounded overflow-hidden shadow-lg pb-6 ">
+        <div className="max-w-sm rounded overflow-hidden shadow-lg pb-6 ml-10 ">
           <img
             className="w-full"
             src="/assets/list1.png"
@@ -113,6 +115,31 @@ const Landing = () => {
         >
           Read More
         </Button>
+      </div>
+
+      {/* location */}
+
+      <div className="bg-slate-200">
+        <h1>Find By Locations</h1>
+
+        <div>
+          <Card className="w-[350px] h-[350px]">
+            <CardContent className="relative">
+              <Image
+                src="/assets/image7.png"
+                alt="Sunset in the mountains"
+                layout="fill"
+                objectFit="cover"
+              />
+            </CardContent>
+          </Card>
+        </div>
+
+        <div>
+          <img className="w-full" src="/assets/Frame.png" alt="" />
+        </div>
+
+        
       </div>
     </div>
   );
