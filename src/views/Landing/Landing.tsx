@@ -20,6 +20,8 @@ const Landing = () => {
         />
       </div>
 
+     
+
       <div className="absolute inset-0 flex items-center justify-center flex-col">
         <h1 className="text-white text-6xl font-bold">Find Your Dream Home</h1>
         <p className="text-2xl text-white mt-4">
@@ -60,8 +62,8 @@ const Landing = () => {
       </div>
 
       {/* property listing */}
-      <div>
-        <h1 className="">LATEST PROPERTY LISTINGS</h1>
+      <div className="flex justify-center items-center mt-20 flex-col">
+        <h1 className="font-bold m-12">LATEST PROPERTY LISTINGS</h1>
 
         <div className="max-w-sm rounded overflow-hidden shadow-lg pb-6 ml-10 ">
           <img
@@ -119,27 +121,142 @@ const Landing = () => {
 
       {/* location */}
 
-      <div className="bg-slate-200">
-        <h1>Find By Locations</h1>
+      <div className="bg-gray-200">
+      <div className="flex justify-center items-center m-20 flex-col">
+        <h1 className="font-bold m-20">Find By Locations</h1>
 
-        <div>
+        
           <Card className="w-[350px] h-[350px]">
             <CardContent className="relative">
-              <Image
+              <img
                 src="/assets/image7.png"
                 alt="Sunset in the mountains"
-                layout="fill"
-                objectFit="cover"
+                className="w-full h-full"
+            
               />
             </CardContent>
           </Card>
+        
         </div>
 
         <div>
           <img className="w-full" src="/assets/Frame.png" alt="" />
         </div>
 
-        
+
+        {/* why choose us */}
+
+        <div className="flex justify-center items-center mt-20 flex-col">
+        <h1 className="font-bold mb-6">Why Choose Us</h1>
+          
+
+
+
+          <div className="m-16 flex gap-12">
+            <Card className="w-[262px] h-[340px]">
+              <CardContent className="flex  flex-col gap-12 p-12 items-center justify-center">
+                <img
+                  src="/assets/image8.png"
+                  alt="Sunset in the mountains"
+                  className=" w-[112px] h-[112px]"
+                />
+
+                <div className="text-center">
+                  <h1 className="font-semibold text-base">
+                    Trusted By Thousands
+                  </h1>
+                  <p className="font-light text-base	">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque{" "}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="w-[262px] h-[340px] gap-10">
+              <CardContent className="flex  flex-col gap-12 p-12 items-center justify-center">
+                <img
+                  src="/assets/image8.png"
+                  alt="Sunset in the mountains"
+                  className=" w-[112px] h-[112px]"
+                />
+
+                <div className="text-center">
+                  <h1 className="font-semibold text-base">
+                    Trusted By Thousands
+                  </h1>
+                  <p className="font-light text-base	">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque{" "}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="w-[262px] h-[340px] gap-10">
+              <CardContent className="flex  flex-col gap-12 p-12 items-center justify-center">
+                <img
+                  src="/assets/image8.png"
+                  alt="Sunset in the mountains"
+                  className=" w-[112px] h-[112px]"
+                />
+
+                <div className="text-center">
+                  <h1 className="font-semibold text-base">
+                    Trusted By Thousands
+                  </h1>
+                  <p className="font-light text-base	">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque{" "}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="w-[262px] h-[340px] gap-10">
+              <CardContent className="flex  flex-col gap-12 p-12 items-center justify-center">
+                <img
+                  src="/assets/image8.png"
+                  alt="Sunset in the mountains"
+                  className=" w-[112px] h-[112px]"
+                />
+
+                <div className="text-center">
+                  <h1 className="font-semibold text-base">
+                    Trusted By Thousands
+                  </h1>
+                  <p className="font-light text-base	">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Pellentesque{" "}
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+
+
+
+          </div>
+        </div>
+
+        <div>
+          <div className="relative">
+            <img src="/assets/image9.jpg" alt="smt" className="w-full h-[621px]" />
+
+            <div className="absolute inset-x-0 top-0 flex items-center justify-center flex-col text-center mt-12">
+              <h1 className="text-3xl font-semibold	text-black">
+                Find Your Dream Home Today
+              </h1>
+              <Button
+                className="mt-6 rounded w-[133px] h-[44px]"
+                variant={"default"}
+                size={"lg"}
+              >
+                Book Now
+              </Button>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
