@@ -14,6 +14,7 @@ import PropertyDetails from "./components/PropertyDetails";
 import Description from "./components/Description";
 import FloorPlan from "./components/FloorPlan";
 import Nearby from "./components/Nearby";
+import PropertyVideo from "./components/PropertyVideo";
 
 const PropertyDetail = () => {
   return (
@@ -71,7 +72,10 @@ const PropertyDetail = () => {
             <FloorPlan />
 
             {/* nearby */}
-            <Nearby/>
+            <Nearby />
+
+            {/* Property Video */}
+            <PropertyVideo />
           </div>
 
           <div className="col-span-4">hi</div>
