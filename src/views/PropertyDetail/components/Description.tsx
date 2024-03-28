@@ -3,9 +3,9 @@ import React from "react";
 const Description = () => {
   return (
     <div>
-      <div className="bg-white mt-10 flex justify-center items-center">
-        <div className="mt-6 px-10 flex flex-col">
-          <h1 className="font-bold border-b-4 w-12 border-teal-500 pt-8 ">
+      <div className="bg-white mt-8 flex justify-center items-center rounded-xl">
+        <div className="p-6 flex flex-col mb-4">
+          <h1 className="font-bold border-b-4 w-12 border-teal-500 pt-4 ">
             Description
           </h1>
           <p className="mt-6">

@@ -4,11 +4,11 @@ import { FaUserDoctor } from "react-icons/fa6";
 
 const Nearby = () => {
   return (
-    <div className="bg-white mt-10 ">
+    <div className="bg-white mt-10 rounded-xl ">
       <div className="mt-6 px-10 flex flex-col">
         <div className="flex flex-col">
           <h1 className="font-bold pt-8 mr-4">What's Nearby</h1>
-          <div className="border-b-4 border-teal-500 w-12"></div>
+          <div className="border-b-4 border-teal-500 my-2 w-12"></div>
         </div>
 
         <div className="flex flex-col justify-start py-4">

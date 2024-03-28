@@ -2,7 +2,7 @@ import React from "react";
 
 const FloorPlan = () => {
   return (
-    <div className="bg-white mt-10 ">
+    <div className="bg-white mt-10 rounded-xl ">
       <div className="mt-6 px-10 flex flex-col">
         <div className="flex flex-col">
           <h1 className="font-bold pt-8 mr-4">Floor Plans</h1>
