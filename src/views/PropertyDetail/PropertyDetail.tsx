@@ -19,6 +19,8 @@ import Location from "./components/Location";
 import TopDetail from "./components/TopDetail";
 import PriceInsight from "./components/PriceInsight";
 import Review from "./components/Review";
+import Rating from "./components/Rating";
+import Rightbar from "./components/Rightbar";
 
 const PropertyDetail = () => {
   return (
@@ -60,10 +62,14 @@ const PropertyDetail = () => {
             {/* Price Insight */}
             <PriceInsight/>
 
+            <Rating/>
+
             <Review/>
           </div>
 
-          <div className="col-span-4">hi</div>
+          <div className="col-span-4">
+            <Rightbar/>
+          </div>
         </div>
       </div>
     </div>
