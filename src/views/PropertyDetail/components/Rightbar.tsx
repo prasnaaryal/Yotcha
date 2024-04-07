@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { IoArrowRedo } from "react-icons/io5";
-import { MdFavoriteBorder } from "react-icons/md";
+import {
+  MdFavoriteBorder,
+  MdOutlineEmail,
+  MdOutlineMailOutline,
+} from "react-icons/md";
 import { TbArrowsShuffle } from "react-icons/tb";
 import { SlCalender } from "react-icons/sl";
 
@@ -15,39 +19,42 @@ import {
   PopoverTrigger,
 } from "@/components/ui/popover";
 import { Calendar } from "@/components/ui/calendar";
+import { FaLocationDot, FaPhone } from "react-icons/fa6";
+import { Input } from "@/components/ui/input";
+import { Textarea } from "@/components/ui/textarea";
 
 const Rightbar = () => {
   const [date, setDate] = useState<Date>();
-  const[counter,setCounter]=useState(0);
-  const[initialCount,setInitialCount]=useState(0);
+  const [counter, setCounter] = useState(0);
+  const [initialCount, setInitialCount] = useState(0);
   const [time, setTime] = useState("12:00");
 
-//   const handleInitialCountChange = (event) => { 
-//     setInitialCount(Number(event.target.value)); 
-// }; 
+  const handleInitialCountChange = (e) => {
+    setInitialCount(Number(e.target.value));
+  };
 
-const handleReset = () => { 
-  setCounter(initialCount); 
-}; 
+  const handleReset = () => {
+    setCounter(initialCount);
+  };
 
-const handleClick1 = () => { 
-  setCounter(counter + 1); 
-}; 
+  const handleClick1 = () => {
+    setCounter(counter + 1);
+  };
 
-const handleClick2 = () => { 
-  setCounter(counter - 1); 
-}; 
+  const handleClick2 = () => {
+    setCounter(counter - 1);
+  };
 
   return (
     <div>
-      <div className="bg-white mt-10 rounded-xl h-44 w-90 ">
-        <div className="flex p-8 gap-10">
+      <div className="bg-white mt-10 rounded-xl h-44 w-[350px] ">
+        <div className="flex p-6 gap-10">
           <Button
             variant="outline"
             size="lg"
             className="rounded-lg w-36 h-12 bg-green-200 bg-opacity-20 border-teal-500 border-2"
           >
-            <IoArrowRedo />
+            <IoArrowRedo className="text-teal-500 m-2" />
             Share
           </Button>
           <Button
@@ -55,7 +62,7 @@ const handleClick2 = () => {
             size="lg"
             className="rounded-lg w-36 h-12 bg-orange-200 bg-opacity-30 border-orange-400 border-2"
           >
-            <MdFavoriteBorder />
+            <MdFavoriteBorder className="text-orange-500 m-2" />
             Save
           </Button>
         </div>
@@ -64,15 +71,15 @@ const handleClick2 = () => {
           <Button
             variant="outline"
             size="lg"
-            className="rounded-lg w-80 h-12 bg-green-200 bg-opacity-20 border-teal-500 border-2"
+            className="rounded-lg w-72 h-12 bg-green-200 bg-opacity-20 border-teal-500 border-2"
           >
-            <TbArrowsShuffle />
+            <TbArrowsShuffle className="text-teal-500 m-2" />
             Add to Compare
           </Button>
         </div>
       </div>
 
-      <div className="bg-white mt-10 rounded-xl h-80 w-84 ">
+      <div className="bg-white mt-10 rounded-xl h-80 w-[350px]">
         <h1>Schedule a Tour</h1>
         <div className="border-b-2"></div>
 
@@ -111,11 +118,77 @@ const handleClick2 = () => {
 
           <div>
             <h1>Adult</h1>
-            <div>
-            </div>
-              <Button onClick={handleClick1}>+</Button>
-              <h2></h2>
-              <Button onClick={handleClick2}>-</Button>
+            <div></div>
+            <Button onClick={handleClick1}>+</Button>
+            <h2></h2>
+            <Button onClick={handleClick2}>-</Button>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white mt-10 rounded-xl h-[799px] w-[350px] ">
+        <h1 className="p-6 font-semibold text-lg">Agent Information</h1>
+        <div className="border-b-2"></div>
+
+        <div className="flex m-6">
+          <img
+            src="/assets/profile.png"
+            className="w-auto h-24"
+            alt="profile img"
+          />
+          <div>
+            <h1 className="text-lg font-semibold mt-4">Lisa Clark</h1>
+            <p className="text-slate-500 font-sm">Agent of Property</p>
+          </div>
+        </div>
+        <div className="mx-6 ">
+          <p className="flex gap-8 mb-6">
+            <FaLocationDot className="text-teal-400 mt-1" />
+            302 Av Park, New York
+          </p>
+          <p className="flex gap-8 mb-6">
+            <FaPhone className="text-teal-400 mt-1" />
+            (234) 0200 17813
+          </p>
+          <p className="flex gap-8 mb-10">
+            <MdOutlineEmail className="text-teal-400 mt-1 text-bold " />
+            lisa@gmail.com
+          </p>
+        </div>
+
+        <div className="border-b-2"></div>
+
+        <div>
+          <h1 className="m-4 font-semibold text-base">Request Inquiry</h1>
+          <Input placeholder="Full Name" className="h-11 w-[303px] m-4" />
+          <Input placeholder="Phone Number" className="h-11 w-[303px] m-4" />
+          <Input placeholder="Email Address" className="h-11 w-[303px] m-4 " />
+          <Textarea placeholder="Message" className="h-24 w-[303px] m-4" />
+        </div>
+
+        <Button className="h-11 w-[303px] m-4">Submit Request</Button>
+      </div>
+
+      <div className="bg-white mt-10 rounded-xl h-[913px] w-[350px] ">
+        <h1 className="p-6 font-semibold text-lg">Featured Property</h1>
+        <div className="border-b-2"></div>
+
+        <div className="flex m-6">
+          <img
+            src="/assets/profile.png"
+            className="w-auto h-24"
+            alt="profile img"
+          />
+          <div>
+            <h1 className="text-lg font-semibold mt-4">Westchester Village</h1>
+            <p className="text-slate-500 font-sm">July 24, 2022</p>
+            <p className="flex gap-2 mb-6">
+              <FaLocationDot className="text-teal-400 mt-1" />
+              3599 Huntz Lane{" "}
+            </p>
+            <Button className="rounded-full w-14 h-7 bg-teal-200 bg-opacity-30 text-teal-500">
+              Buy
+            </Button>
           </div>
         </div>
       </div>
